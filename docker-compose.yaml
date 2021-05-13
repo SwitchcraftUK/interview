@@ -1,0 +1,28 @@
+version: "3.8"
+
+services:
+
+  mongodb:
+    image: mongo:4
+    restart: always
+    ports:
+      - 27017:27017
+
+  swc-interview-base-image:
+    image: swc-interview-base-image
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+
+  backend:
+    ports:
+      - 4000:4000
+    build:
+      context: .
+      dockerfile: ./packages/backend/Dockerfile
+    volumes:
+      - ./packages/backend/src:/app/packages/backend/src
+      - ./packages/backend/dist:/app/packages/backend/dist
+    depends_on:
+      - swc-interview-base-image
+      - mongodb
