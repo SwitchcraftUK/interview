@@ -38,3 +38,9 @@ services:
       - ./packages/frontend/dist:/app/packages/frontend/dist
     depends_on:
       - backend
+    networks:
+      - main
+
+networks:
+  main:
+    name: main

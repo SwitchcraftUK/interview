@@ -8,9 +8,11 @@ plugins:
   - "@typescript-eslint"
   - no-null
   - jest
+  - cypress
 env:
   node: true
   jest/globals: true
+  cypress/globals: true
 rules:
 
   no-null/no-null:
@@ -174,8 +176,6 @@ rules:
   block-spacing:
     - error
   brace-style:
-    - error
-  capitalized-comments:
     - error
   comma-spacing:
     - error
