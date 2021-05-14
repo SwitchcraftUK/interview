@@ -20,7 +20,6 @@
     "start": "yarn dev",
     "dev": "yarn tsc -w --preserveWatchOutput & nodemon --watch 'dist/**/*' --exec node ./dist/src/dev.js",
     "build": "yarn tsc",
-    "postinstall": "yarn build",
     "test": "jest"
   },
   "devDependencies": {
