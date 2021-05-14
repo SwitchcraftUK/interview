@@ -2,6 +2,9 @@
 version: "3.8"
 services:
 
+  frontend:
+    command: --configuration=e2e
+
   e2e:
     build:
       context: .

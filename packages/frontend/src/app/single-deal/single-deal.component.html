@@ -1,4 +1,4 @@
-<ng-container *ngIf="deal">
+<div class="deal" *ngIf="deal" data-e2e="deal">
   <div class="title-row">
 
     <div class="logo-wrapper">
@@ -19,8 +19,8 @@
   </div>
 
   <div class="details-row">
-    <div class="cost">£{{ deal.yearlyCost }} a year</div>
+    <div class="cost" data-e2e="cost">£{{ deal.yearlyCost }} a year</div>
     <div *ngIf="deal.durationMonths" class="duration">{{ deal.durationMonths }} months</div>
   </div>
 
-</ng-container>
+</div>

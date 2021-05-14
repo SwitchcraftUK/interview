@@ -3,6 +3,7 @@ import { FrontendDealsResponse, FrontendDeal } from "@switchcraft-interview/shar
 import { HttpClient } from "@angular/common/http";
 import { map } from "rxjs/operators";
 import { Observable } from "rxjs";
+import { environment } from "../../environments/environment";
 
 @Component({
   selector: "app-all-deals",
@@ -24,7 +25,7 @@ export class AllDealsComponent implements OnInit {
   refreshDeals (): void {
     this.deals$ = this.httpClient
       .get<FrontendDealsResponse>(
-        `${"http://localhost:4000"}/deals`
+        `${environment.backendUrl}/deals`
       )
       .pipe(
         map((response) => response.deals)

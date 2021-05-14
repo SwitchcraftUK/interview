@@ -11,6 +11,8 @@ services:
       - ./database-init:/docker-entrypoint-initdb.d
     environment:
       - MONGO_INITDB_DATABASE=interview
+    networks:
+      - main
 
   swc-interview-base-image:
     image: swc-interview-base-image
@@ -30,6 +32,8 @@ services:
     depends_on:
       - swc-interview-base-image
       - mongodb
+    networks:
+      - main
 
   frontend:
     ports:
@@ -42,8 +46,6 @@ services:
       - ./packages/frontend/dist:/app/packages/frontend/dist
     depends_on:
       - backend
-    environment:
-      - BACKEND_URL=http://backend:4000
     networks:
       - main
 
