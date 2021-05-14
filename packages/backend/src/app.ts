@@ -2,6 +2,7 @@ import express from "express";
 import { ApiError } from "./api-error.interface";
 import { appLogger } from "./app-logger";
 import { handleApiErrors } from "./handle-error";
+import { getTest } from "./get-test";
 
 const app = express();
 app.use(express.json());
@@ -19,7 +20,7 @@ app.use((req, res, next) => {
 app.get<{
   readonly input: string;
 }, {
-  readonly success: true;
+  readonly success: boolean;
 }>("/test", (req, res) => {
   const { input } = req.query;
   if (!input) {
@@ -28,7 +29,7 @@ app.get<{
       message: "Input is not defined"
     });
   }
-  return res.json({ success: true });
+  return res.json(getTest());
 });
 
 app.use(handleApiErrors);
