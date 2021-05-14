@@ -7,8 +7,10 @@ parserOptions:
 plugins:
   - "@typescript-eslint"
   - no-null
+  - jest
 env:
   node: true
+  jest/globals: true
 rules:
 
   no-null/no-null:
@@ -219,8 +221,6 @@ rules:
     - error
   multiline-comment-style:
     - error
-  new-cap:
-    - error
   new-parens:
     - error
   newline-per-chained-call:
@@ -364,11 +364,6 @@ rules:
   "@typescript-eslint/consistent-type-definitions":
     - error
     - interface
-  "@typescript-eslint/consistent-type-imports":
-    - error
-    -
-      prefer: 'type-imports'
-      disallowTypeAnnotations: true
   "@typescript-eslint/explicit-function-return-type":
     - error
   "@typescript-eslint/member-delimiter-style":
@@ -389,8 +384,6 @@ rules:
   "@typescript-eslint/no-explicit-any":
     - error
   "@typescript-eslint/no-extra-non-null-assertion":
-    - error
-  "@typescript-eslint/no-extraneous-class":
     - error
   "@typescript-eslint/no-floating-promises":
     - error

@@ -26,3 +26,15 @@ services:
     depends_on:
       - swc-interview-base-image
       - mongodb
+
+  frontend:
+    ports:
+      - 4200:4200
+    build:
+      context: .
+      dockerfile: ./packages/frontend/Dockerfile
+    volumes:
+      - ./packages/frontend/src:/app/packages/frontend/src
+      - ./packages/frontend/dist:/app/packages/frontend/dist
+    depends_on:
+      - backend
