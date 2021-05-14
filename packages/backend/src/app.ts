@@ -1,8 +1,8 @@
 import express from "express";
-import { ApiError } from "./api-error.interface";
 import { appLogger } from "./app-logger";
 import { handleApiErrors } from "./handle-error";
-import { getTest } from "./get-test";
+import { getBigGreenEnergyDeals } from "./big-green-energy-deals/get-big-green-energy-deals";
+import type { FrontendDealsResponse } from "@switchcraft-interview/shared-models";
 
 const app = express();
 app.use(express.json());
@@ -17,19 +17,11 @@ app.use((req, res, next) => {
   next();
 });
 
-app.get<{
-  readonly input: string;
-}, {
-  readonly success: boolean;
-}>("/test", (req, res) => {
-  const { input } = req.query;
-  if (!input) {
-    throw new ApiError({
-      code: 500,
-      message: "Input is not defined"
-    });
-  }
-  return res.json(getTest());
+app.get<undefined, FrontendDealsResponse>("/deals", async (req, res) => {
+  const deals = await getBigGreenEnergyDeals();
+  return res.json({
+    deals
+  });
 });
 
 app.use(handleApiErrors);
