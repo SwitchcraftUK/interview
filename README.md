@@ -5,11 +5,20 @@
 - Yarn: `npm i -g yarn`
 - The latest version of Docker to run the app: https://www.docker.com/products/docker-desktop
 
-## Running the app
+## Setup
 
-- Clone the repository locally: `git clone git@github.com:SwitchcraftUK/interview.git`
+- Create a new private repository on github
+- Clone the interview repository locally: `git clone git@github.com:SwitchcraftUK/interview.git`
+- Open the repository directory in your terminal
+- Delete the git folder `rm -rf ./.git`
+- Initialize git again `git init`
+- Add the remote to your new private repository `git remote add origin git@github.com:{YOURNAME}/{REPONAME}.git`
+- Stage the original code `git add .`
+- Commit the original code `git commit -m "original code"`
+- Push the existing code to your new private repository `git push origin master`
 - Install the dependencies: `yarn`
 - Start the app: `yarn start`
+- Start the task and commit your changes 
 
 ## The task
 
