@@ -63,8 +63,6 @@ rules:
   no-else-return:
     - error
     - allowElseIf: true
-  no-empty-function:
-    - error
   no-eq-null:
     - error
   no-eval:
@@ -320,8 +318,6 @@ rules:
     - error
   no-useless-computed-key:
     - error
-  no-useless-constructor:
-    - error
   no-useless-rename:
     - error
   no-var:
@@ -393,8 +389,6 @@ rules:
     - error
   "@typescript-eslint/no-namespace":
     - error
-  "@typescript-eslint/no-parameter-properties":
-    - error
   "@typescript-eslint/no-require-imports":
     - error
   "@typescript-eslint/no-this-alias":
@@ -434,8 +428,6 @@ rules:
   "@typescript-eslint/prefer-nullish-coalescing":
     - error
   "@typescript-eslint/prefer-optional-chain":
-    - error
-  "@typescript-eslint/prefer-readonly":
     - error
   "@typescript-eslint/prefer-reduce-type-parameter":
     - error
