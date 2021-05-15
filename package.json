@@ -22,7 +22,7 @@
   "scripts": {
     "start": "docker compose -f ./docker-compose.yaml up",
     "lint": "eslint 'packages/**/*.ts'",
-    "postinstall": "lerna bootstrap",
+    "postinstall": "lerna bootstrap && lerna run build",
     "prepare": "husky install",
     "test": "yarn test:frontend && yarn test:backend",
     "test:frontend": "cd ./packages/frontend && yarn test",
