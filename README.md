@@ -17,6 +17,7 @@
 - Stage the original code `git add .`
 - Commit the original code `git commit -m "original code"`
 - Push the existing code to your new private repository `git push origin master`
+- Create a new branch `git checkout -b code-test`
 - Install the dependencies: `yarn`
 - Start the app: `yarn start`
 
@@ -28,7 +29,7 @@ Your tasks are:
 - Under the fixed duration label, add another feature label "Green Energy". This should only be shown if the deal is a green deal.
 - The UI is only currently displaying deals for Big Green Energy. There is another collection in the database called "shinyYellowEnergyDeals". This contains deals provided by Shiny Yellow Energy. Your task is to change the system so these deals are shown on the frontend. The deals should be displayed with the cheapest first and most expensive last.
 
-When you've completed the task, open the GitHub repository in the GitHub UI, go to Settings -> Manage Access, and invite chrisberry4545 as a collaborator.
+Once you've completed the task, open a pull request to the master branch with your changes. Then, open the GitHub repository in the GitHub UI, go to Settings -> Manage Access, and invite chrisberry4545 as a collaborator.
 
 ### Other useful scripts
 
