@@ -8,4 +8,6 @@ COPY ./lerna.json ./lerna.json
 COPY ./packages ./packages
 RUN yarn install
 
+WORKDIR /app/packages/frontend
+
 ENTRYPOINT [ "yarn", "dev" ]
