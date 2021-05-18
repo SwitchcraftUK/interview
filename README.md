@@ -34,7 +34,7 @@ Once you've completed the task, open a pull request to the master branch with yo
 ### Other useful scripts
 
 - You can run the existing unit and integration tests with `yarn test`
-- The existing end to end tests can be run with `test:e2e` or `test:e2e:docker`
+- The existing end to end tests can be run with `yarn test:e2e` or `yarn test:e2e:docker`
 
 ### Hints
 
