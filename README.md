@@ -2,7 +2,7 @@
 
 ## Requirements
 
-- Node 14: https://nodejs.org/en/
+- Node 14.17.0: https://nodejs.org/en/
 - Yarn: `npm i -g yarn`
 - The latest version of Docker to run the app: https://www.docker.com/products/docker-desktop
 
