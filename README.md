@@ -43,3 +43,7 @@ Once you've completed the task, open a pull request to the master branch with yo
 - Feel free to google anything you're not sure about.
 - Think about how you might validate what you've done is correct?
 - Email chris.berry@switchcraft.co.uk if you get really stuck with something.
+
+## Setup debugging
+
+- If you get a 137 error from the frontend while running in docker it is likely you don't have docker configured with enough memory. Try going to settings -> resources in the docker UI and increasing the memory. We've tested with the default of 2GB but you may run into issues with less.
