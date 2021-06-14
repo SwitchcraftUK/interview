@@ -11,7 +11,7 @@ describe("SingleDealComponent", () => {
     dealName: "Big Green Deal",
     supplierName: "Big Green Energy",
     yearlyCost: 500,
-    isGreenEnergy: false,
+    isGreenEnergy: true,
     logo: "logo"
   };
 
@@ -76,11 +76,10 @@ describe("SingleDealComponent", () => {
 
   });
 
-  describe("when there is a deal features", () => {
+  describe("when the deal has a duration", () => {
     const dealWithFeatures: FrontendDeal = {
       ...deal,
-      durationMonths: 10,
-      isGreenEnergy: true
+      durationMonths: 10
     };
 
     beforeEach(() => {
